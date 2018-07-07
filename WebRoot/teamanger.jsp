@@ -18,7 +18,7 @@
 						</h1>
 					</div>
 				</div>
-					<table class="table" border="2">
+					<table class="table" border="2" bgcolor="lightblue">
 						<tr class="table_header">
 							<td>
 								教师号
@@ -31,6 +31,9 @@
 							</td>
 							<td>
 								教师密码
+							</td>
+							<td>
+							        操作
 							</td>
 						</tr>	
   

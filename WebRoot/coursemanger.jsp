@@ -18,7 +18,7 @@
 						</h1>
 					</div>
 				</div>
-					<table class="table" border="2">
+					<table class="table" border="2" bgcolor="lightblue">
 						<tr class="table_header">
 							<td>
 								课程名：
@@ -32,6 +32,7 @@
 							<td>
 								教师：
 							</td>
+						
 						</tr>	
   
 <s:iterator  value="#listcou" id="course"> 

@@ -55,20 +55,25 @@ public class LoginAction extends ActionSupport{
 	StuDao stuDao =new StuDao();
 	
 	public String execute() throws Exception {
+		//这一步判断用户是不是admin用户
 		  if("3".equals(type)){
 			  admin.setPassword(password);
 			  admin.setUsername(username);
+			  //下面的if里面使用admin用户查询方法
 			  if(adminDao.isLogin(admin)){ 	
 				return "success3";
 			  }
 		  }
+		  //如果上一步判断失败，进一步判断用户是不是teacher用户
 	      else if("2".equals(type)) {
 	    	  teacher.setTeacherpass(password);
 	    	  teacher.setTeachername(username);
+	    	  //同上，下不解释
 		      if(teacherDao.isLogin(teacher)){
 		    	  return "success2";
 		    	  }
 	      }
+		  //如果上一步判断失败，再一步判断用户是不是stu用户
 	       else if("1".equals(type)){
 		       stu.setStupass(password);
 		       stu.setStuname(username);

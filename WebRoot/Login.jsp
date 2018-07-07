@@ -38,6 +38,8 @@
 </head>
 <body>
 
+
+
 <div class="header" style="padding: 0;">
 	<h2 style="color: white; width: 400px; height: 60px; line-height: 60px; margin: 0 0 0 30px; padding: 0;">学生成绩管理系统</h2>
 </div>

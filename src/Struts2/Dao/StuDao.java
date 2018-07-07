@@ -132,7 +132,8 @@ import Struts2.util.DbConn;
 					while (rs.next()) {
 						String coursename = rs.getString("coursename");
 						int score = rs.getInt("score");
-						ss = new Score(coursename,score);
+						String teachername =  rs.getString("teachername");
+						ss = new Score(coursename,score,teachername);
 						list.add(ss);
 					}
 				} catch (SQLException e) {

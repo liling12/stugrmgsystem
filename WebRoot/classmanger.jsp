@@ -18,7 +18,7 @@
 						</h1>
 					</div>
 				</div>
-					<table class="table" border="2">
+					<table class="table" border="2" bgcolor="lightblue">
 						<tr class="table_header">
 							<td>
 								班级号
@@ -26,6 +26,7 @@
 							<td>
 								班级
 							</td>
+					
 						</tr>	
   
 <s:iterator  value="#listcl" id="class"> 
