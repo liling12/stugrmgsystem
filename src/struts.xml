@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+	<struts>
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+     <package name="Struts2.Action" extends = "struts-default" >
+ 
+       <action name="login" class="Struts2.Action.LoginAction">  
+          <result name="success1" type = "chain">Listss</result>   
+          <result name="success2" type = "chain">Listtc</result>        
+          <result name="success3">/admin.jsp</result>
+          <result name="input">/Login.jsp</result>      
+       </action>
+       <action name="Listss" class="Struts2.Action.LoginAction" method="Listss">
+          <result name="listss" >/stu.jsp</result>
+       </action>   
+       <action name="Listtc" class="Struts2.Action.LoginAction" method="Listtc">
+          <result name="listtc" >/teacher.jsp</result>
+       </action> 
+       
+        
+       <action name="ListTea" class="Struts2.Action.TeacherMAction" method="ListTea">
+          <result name="teach">/teamanger.jsp</result>
+       </action>  
+       <action name="addTea" class="Struts2.Action.TeacherMAction" method="addTea">
+          <result name="teacher" type = "chain">ListTea</result>
+       </action>
+       <action name="STeacher" class="Struts2.Action.TeacherMAction" method="STeacher">
+          <result name="steacher" >/updateT.jsp</result>
+	   </action>
+	   <action name="updateT" class="Struts2.Action.TeacherMAction" method="updateT">
+          <result name="teacher" type = "chain">ListTea</result>
+       </action>
+       <action name="Scourse" class="Struts2.Action.TeacherMAction" method="Scourse">
+          <result name="scourse" >/Sscore.jsp</result>
+       </action>
+       <action name="ListSc" class="Struts2.Action.TeacherMAction" method="ListSc">
+          <result name="ListSc">/updateSc.jsp</result>
+       </action>
+       <action name="updateSc" class="Struts2.Action.TeacherMAction" method="updateSc">
+          <result name="updateSc" type = "chain">Scourse</result>
+       </action>
+         
+         
+       <action name="ListGrade" class="Struts2.Action.GradeMAction" method="ListGrade">
+          <result name="grade">/grademanger.jsp</result>
+       </action>
+       <action name="addGrade" class="Struts2.Action.GradeMAction" method="addGrade">
+          <result name="Agrade" type = "chain">ListGrade</result>
+       </action>
+       
+       
+       <action name="ListClass" class="Struts2.Action.ClassMAction" method="ListClass">
+          <result name="class">/classmanger.jsp</result>
+       </action>
+       <action name="addClass" class="Struts2.Action.ClassMAction" method="addClass">
+          <result name="Aclass" type="chain" >ListClass</result>
+       </action>
+       <action name="ListCl" class="Struts2.Action.ClassMAction" method="ListCl">
+          <result name="success" >/addS.jsp</result>
+       </action>
+         
+         
+       <action name="ListStu" class="Struts2.Action.StuMAction" method="ListStu">
+          <result name="stu">/stumanger.jsp</result>
+       </action>
+       <action name="addStu" class="Struts2.Action.StuMAction" method="addStu">
+          <result name="student" type="chain">ListStu</result>
+       </action> 
+       <action name="SStu" class="Struts2.Action.StuMAction" method="SStu">
+          <result name="student" >updateS.jsp</result>
+       </action> 
+       <action name="updateS" class="Struts2.Action.StuMAction" method="updateS">
+          <result name="student" type="chain">ListStu</result>
+       </action>
+
+                
+       <action name="ListCou" class="Struts2.Action.CourseMAction" method="ListCou">
+          <result name="cou">/coursemanger.jsp</result>
+       </action> 
+       <action name="ListC" class="Struts2.Action.CourseMAction" method="ListC">
+          <result name="success">/addCou.jsp</result>
+       </action>
+       <action name="addCou" class="Struts2.Action.CourseMAction" method="addCou">
+          <result name="course" type = "chain" >ListCou</result>
+       </action>
+       <action name="Listgc" class="Struts2.Action.CourseMAction" method="Listgc">
+          <result name="course" >showcourse.jsp</result>
+       </action>                                                                              
+     </package>
+     
+
+	</struts>
